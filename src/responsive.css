@@ -1,0 +1,169 @@
+/* responsive.css */
+
+/* Adjustments for screens up to 1339px */
+@media only screen and (max-width: 1339px) {
+	.main-header .header-upper .links-box {
+	  margin-left: 20px;
+	}
+  
+	.main-menu .navigation > li {
+	  margin-left: 25px;
+	}
+  
+	.auto-container {
+	  padding: 0 15px; /* Slightly reduce padding for narrower screens */
+	}
+  }
+  
+  /* Hide navigation and show toggler for screens up to 1199px */
+  @media only screen and (max-width: 1199px) {
+	.main-header .nav-toggler {
+	  display: block;
+	}
+  
+	.main-header .nav-outer {
+	  display: none;
+	}
+  
+	.main-header .header-upper {
+	  padding: 10px 0; /* Adjust padding for smaller screens */
+	}
+  
+	.main-menu .navigation > li {
+	  margin-left: 20px;
+	}
+  }
+  
+  /* Dropdown visibility tweak for screens 768px and up (desktop dropdowns) */
+  @media only screen and (min-width: 768px) {
+	.main-menu .navigation > li > ul {
+	  display: block !important;
+	  visibility: hidden;
+	  opacity: 0;
+	}
+  }
+  
+  /* Typography adjustments for screens up to 991px (tablets) */
+  @media only screen and (max-width: 991px) {
+	h1 { font-size: 44px; }
+	h2 { font-size: 40px; }
+	h3 { font-size: 24px; }
+	h4 { font-size: 20px; }
+  
+	.main-game-block .row {
+	  flex-direction: column; /* Stack columns vertically */
+	}
+  
+	.place-bet-block {
+	  width: 100%; /* Full width for smaller screens */
+	  margin-bottom: 20px;
+	}
+  
+	.header-two .header-upper .links-box {
+	  margin-left: 20px;
+	  padding-top: 15px;
+	}
+  
+	.banner-section {
+	  padding: 80px 0 20px; /* Reduce padding for smaller screens */
+	}
+  }
+  
+  /* Further adjustments for screens up to 767px (mobile) */
+  @media only screen and (max-width: 767px) {
+	h1 { font-size: 40px; }
+	h2 { font-size: 36px; line-height: 40px; }
+  
+	.main-header .main-box .logo-box {
+	  padding: 20px 0; /* Reduce padding for mobile */
+	}
+  
+	.main-header .nav-toggler {
+	  margin-top: 10px;
+	}
+  
+	.hidden-bar {
+	  max-width: 280px; /* Slightly narrower sidebar for mobile */
+	}
+  
+	.hidden-bar .side-menu ul li a {
+	  padding: 10px 20px; /* Adjust padding for touch targets */
+	}
+  
+	.wheel {
+	  height: 340px; /* Adjusted wheel height */
+	}
+  
+	.wheel-mask {
+	  top: -105px;
+	  width: 125px;
+	  height: 125px;
+	  margin: 0 auto;
+	}
+  
+	.banner-section {
+	  padding: 60px 0 15px; /* Further reduce padding */
+	}
+  
+	.footer-one .lower .inner {
+	  padding: 15px 0; /* Reduce footer padding */
+	}
+  }
+  
+  /* Specific adjustments for screens between 768px and 992px (tablets) */
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+	.wheel {
+	  height: 450px; /* Adjusted wheel height for tablets */
+	}
+  }
+  
+  /* Typography and layout for screens up to 599px (small mobile) */
+  @media only screen and (max-width: 599px) {
+	h1 { font-size: 34px; }
+	h2 { font-size: 30px; line-height: 36px; }
+	h3 { font-size: 22px; }
+	h4 { font-size: 20px; }
+  
+	.main-header .main-box .logo-box .logo img {
+	  height: 32px; /* Smaller logo for tiny screens */
+	}
+  
+	.nav-pills {
+	  width: 100%; /* Full-width nav pills */
+	}
+  
+	.nav-link {
+	  padding: 8px 15px; /* Smaller padding for nav links */
+	}
+  
+	.btn-style-four {
+	  padding: 8px 20px; /* Smaller button padding */
+	  font-size: 14px;
+	}
+  }
+  
+  /* Tiny screens up to 479px */
+  @media only screen and (max-width: 479px) {
+	h2 { font-size: 24px; line-height: 32px; }
+  
+	.hidden-bar {
+	  max-width: 240px; /* Even narrower sidebar */
+	}
+  
+	.hidden-bar .side-menu ul li a {
+	  font-size: 14px;
+	  padding: 8px 15px;
+	}
+  
+	.main-game-block {
+	  padding: 0 0 20px; /* Reduce padding */
+	}
+  
+	.place-bet-block {
+	  margin-bottom: 15px;
+	}
+  
+	.footer-one .lower .copyright {
+	  font-size: 14px;
+	}
+  }
