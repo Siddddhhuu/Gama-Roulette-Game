@@ -140,6 +140,8 @@
 	  padding: 8px 20px; /* Smaller button padding */
 	  font-size: 14px;
 	}
+
+	
   }
   
   /* Tiny screens up to 479px */
@@ -167,3 +169,108 @@
 	  font-size: 14px;
 	}
   }
+
+   /* @media only screen and (max-width: 1199px) {
+    .main-header .nav-toggler {
+      display: block;
+    }
+    .main-header .nav-outer {
+      display: none;
+    }
+  } */
+  
+  @media only screen and (max-width: 767px) {
+    .hidden-bar {
+      max-width: 285px;
+    }
+	.banner-section .inner{
+		margin-top: 15%;
+	}
+  } 
+
+
+  /* Roullete Buttons */
+@media (max-width: 768px) {
+    .d-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .grid-cols-3x {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .grid-cols-5 {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .grid-cols-13 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .keyboardBtn {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .btn {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .btn span {
+        font-size: 14px;
+    }
+
+    .w-75 {
+        width: 100% !important;
+    }
+
+    .btn-outline-warning {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .mt-2 {
+        margin-top: 10px;
+    }
+    
+    .mb-2 {
+        margin-bottom: 10px;
+    }
+
+    .text-center {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Mobile View - Smaller than 480px */
+@media (max-width: 480px) {
+    .grid-cols-3x {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-cols-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .grid-cols-13 {
+        grid-template-columns: repeat(6, 2fr); 
+    }
+
+    .keyboardBtn {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .btn span {
+        font-size: 12px;
+    }
+}

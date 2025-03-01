@@ -13,91 +13,109 @@ const BettingHistory = ({ bets }) => {
           defaultActiveKey="allBets"
           id="betting-tabs"
           variant="pills"
-          className="mb-4"
+          className="mb-4 nav nav-pills"
         >
           <Tab eventKey="allBets" title="All Bets">
-            <table className="table table-striped">
-              <thead>
-                <tr>
-                  <th>Game</th>
-                  <th>Time</th>
-                  <th>Bet Amount</th>
-                  <th>Payout</th>
-                </tr>
-              </thead>
-              <tbody>
-                {bets.map((bet, index) => (
-                  <tr key={index}>
-                    <td>{bet.game}</td>
-                    <td>{bet.time}</td>
-                    <td>
-                      <img src={gamaIcon} alt="GAMA" className="img-xs me-1" />{" "}
-                      {bet.betAmount}
-                    </td>
-                    <td>
-                      <img src={gamaIcon} alt="GAMA" className="img-xs me-1" />{" "}
-                      {bet.payout}
-                    </td>
+            <div className="table-responsive text-nowrap">
+              <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th className="p-3 px-4">Game</th>
+                    <th className="p-3 px-4">Time</th>
+                    <th className="p-3 px-4">Bet Amount</th>
+                    <th className="p-3 px-4">Payout</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="table-border-bottom-0">
+                  {bets.map((bet, index) => (
+                    <tr key={index}>
+                      <td className="p-3 px-4">{bet.game}</td>
+                      <td className="p-3 px-4">{bet.time}</td>
+                      <td className="p-3 px-4">
+                        <div className="d-flex align-items-center">
+                          <img src={gamaIcon} alt="GAMA" className="img-xs me-1" />
+                          <h6 className="fw-medium mb-0">{bet.betAmount}</h6>
+                        </div>
+                      </td>
+                      <td className="p-3 px-4">
+                        <div className="d-flex align-items-center">
+                          <img src={gamaIcon} alt="GAMA" className="img-xs me-1" />
+                          <h6 className="fw-medium mb-0">{bet.payout}</h6>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </Tab>
           <Tab eventKey="wins" title="Wins">
-            <table className="table table-striped">
-              <thead>
-                <tr>
-                  <th>Game</th>
-                  <th>Time</th>
-                  <th>Bet Amount</th>
-                  <th>Payout</th>
-                </tr>
-              </thead>
-              <tbody>
-                {bets.map((bet, index) => (
-                  <tr key={index}>
-                    <td>{bet.game}</td>
-                    <td>{bet.time}</td>
-                    <td>
-                      <img src={gamaIcon} alt="GAMA" className="img-xs me-1" />{" "}
-                      {bet.betAmount}
-                    </td>
-                    <td>
-                      <img src={gamaIcon} alt="GAMA" className="img-xs me-1" />{" "}
-                      {bet.payout}
-                    </td>
+            <div className="table-responsive text-nowrap">
+              <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th className="p-3 px-4">Game</th>
+                    <th className="p-3 px-4">Time</th>
+                    <th className="p-3 px-4">Bet Amount</th>
+                    <th className="p-3 px-4">Payout</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="table-border-bottom-0">
+                  {bets.filter((bet) => Number(bet.payout) > 0).map((bet, index) => (
+                    <tr key={index}>
+                      <td className="p-3 px-4">{bet.game}</td>
+                      <td className="p-3 px-4">{bet.time}</td>
+                      <td className="p-3 px-4">
+                        <div className="d-flex align-items-center">
+                          <img src={gamaIcon} alt="GAMA" className="img-xs me-1" />
+                          <h6 className="fw-medium mb-0">{bet.betAmount}</h6>
+                        </div>
+                      </td>
+                      <td className="p-3 px-4">
+                        <div className="d-flex align-items-center">
+                          <img src={gamaIcon} alt="GAMA" className="img-xs me-1" />
+                          <h6 className="fw-medium mb-0">{bet.payout}</h6>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </Tab>
           <Tab eventKey="losses" title="Losses">
-            <table className="table table-striped">
-              <thead>
-                <tr>
-                  <th>Game</th>
-                  <th>Time</th>
-                  <th>Bet Amount</th>
-                  <th>Payout</th>
-                </tr>
-              </thead>
-              <tbody>
-                {bets.map((bet, index) => (
-                  <tr key={index}>
-                    <td>{bet.game}</td>
-                    <td>{bet.time}</td>
-                    <td>
-                      <img src={gamaIcon} alt="GAMA" className="img-xs me-1" />{" "}
-                      {bet.betAmount}
-                    </td>
-                    <td>
-                      <img src={gamaIcon} alt="GAMA" className="img-xs me-1" />{" "}
-                      {bet.payout}
-                    </td>
+            <div className="table-responsive text-nowrap">
+              <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th className="p-3 px-4">Game</th>
+                    <th className="p-3 px-4">Time</th>
+                    <th className="p-3 px-4">Bet Amount</th>
+                    <th className="p-3 px-4">Payout</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="table-border-bottom-0">
+                  {bets.filter((bet) => Number(bet.payout) === 0).map((bet, index) => (
+                    <tr key={index}>
+                      <td className="p-3 px-4">{bet.game}</td>
+                      <td className="p-3 px-4">{bet.time}</td>
+                      <td className="p-3 px-4">
+                        <div className="d-flex align-items-center">
+                          <img src={gamaIcon} alt="GAMA" className="img-xs me-1" />
+                          <h6 className="fw-medium mb-0">{bet.betAmount}</h6>
+                        </div>
+                      </td>
+                      <td className="p-3 px-4">
+                        <div className="d-flex align-items-center">
+                          <img src={gamaIcon} alt="GAMA" className="img-xs me-1" />
+                          <h6 className="fw-medium mb-0">{bet.payout}</h6>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </Tab>
         </Tabs>
       </div>

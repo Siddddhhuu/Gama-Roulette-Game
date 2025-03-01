@@ -30,13 +30,14 @@ const BetForm = ({ onPlaceBet }) => {
               <div className="input-group input-group-md">
                 <span className="input-group-text">
                   <img
+                  className="ti ti-file-text fs-4"
                     src={require("../assets/images/gama_icon.png")}
                     alt="GAMA Icon"
                   />
                 </span>
                 <input
                   type="text"  
-                  className="form-control"
+                  className="form-control" aria-label="BetAmount" aria-describedby="basic-addon1"
                   id="bet-amount"
                   value={betAmount}
                   onChange={(e) => setBetAmount(e.target.value)}
@@ -101,7 +102,7 @@ const BetForm = ({ onPlaceBet }) => {
         </div>
       </div>
 
-      <div className="card mt-4">
+      <div className="card br-10 mt-4">
         <div className="card-body p-4">
           <div className="bg-label-primary p-3 pt-4 pb-4 rounded mb-3">
             <div className="d-flex">
