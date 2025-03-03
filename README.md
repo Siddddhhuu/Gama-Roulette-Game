@@ -4,6 +4,8 @@ This project was bootstrapped with Create React App.
 
 # Converted Gama Roullete Game into React.js
 
+# Use Node v18.13.0
+
 ## Download the reqiured packages
 
 npm install react-bootstrap bootstrap

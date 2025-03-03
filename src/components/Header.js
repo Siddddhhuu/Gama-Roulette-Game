@@ -20,7 +20,7 @@ const Header = ({ isFixed, toggleSidebar }) => {
               </div>
             </div>
             <div className="nav-box clearfix">
-              <div class="nav-outer clearfix">
+              <div className="nav-outer clearfix">
                 <nav className="main-menu">
                   <ul className="navigation custom-links clearfix">
                     <li>
