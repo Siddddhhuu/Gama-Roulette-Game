@@ -1233,7 +1233,7 @@ input:focus, .input-group:focus, .input-group-text:focus .form-control:focus {
 .nav-pills {
   background-color: #ebf2f5 !important;
   border-radius: 50px!important;
-  width: 300px;
+  width: 298px;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   color: #ffffff;
@@ -2422,6 +2422,9 @@ body.visible-sidebar{
   color: #010101;
   border-top: 1px solid rgba(220, 220, 231, 0.4);
 }
+.bi-heart-fill {
+  font-size: 12px;
+}
 .footer-one .lower .copyright {
   position: relative;
   color: #010101;
@@ -2435,4 +2438,3 @@ body.visible-sidebar{
 .footer-one .lower .copyright a:hover {
   text-decoration: underline;
 }
-

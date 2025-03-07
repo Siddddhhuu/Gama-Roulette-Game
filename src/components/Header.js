@@ -11,12 +11,16 @@ const Header = ({ isFixed, toggleSidebar }) => {
           <div className="main-box clearfix">
             <div className="logo-box clearfix">
               <div className="logo">
-                <Link to="home" smooth={true} duration={1000}>
+                <a
+                  href="https://gamacoin.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src="https://gamacoin.ai/assets/images/gama-logo.svg"
                     alt="GAMA"
                   />
-                </Link>
+                </a>
               </div>
             </div>
             <div className="nav-box clearfix">
@@ -24,14 +28,22 @@ const Header = ({ isFixed, toggleSidebar }) => {
                 <nav className="main-menu">
                   <ul className="navigation custom-links clearfix">
                     <li>
-                      <Link to="home" smooth={true} duration={1000}>
+                      <a
+                        href="https://gamacoin.ai/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Home
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link to="dice" smooth={true} duration={1000}>
+                    <a
+                        href="https://diceroll.gamacoin.ai/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Dice
-                      </Link>
+                      </a>
                     </li>
                     <li>
                       <Link to="roulette" smooth={true} duration={1000}>

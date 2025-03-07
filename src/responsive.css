@@ -129,7 +129,7 @@
 	}
   
 	.nav-pills {
-	  width: 100%; /* Full-width nav pills */
+	  width:auto !important;
 	}
   
 	.nav-link {
@@ -247,7 +247,7 @@
 }
 
 /* Mobile View - Smaller than 480px */
-@media (max-width: 480px) {
+@media (max-width: 480px) and (max-width: 300px) {
     .grid-cols-3x {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -257,7 +257,7 @@
     }
 
     .grid-cols-13 {
-        grid-template-columns: repeat(6, 2fr); 
+        grid-template-columns: repeat(6, 3fr); 
     }
 
     .keyboardBtn {
@@ -273,4 +273,9 @@
     .btn span {
         font-size: 12px;
     }
+	
+}
+
+@media all {
+	
 }

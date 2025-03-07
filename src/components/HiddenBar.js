@@ -12,9 +12,9 @@ const HiddenBar = ({ isVisible, toggleSidebar }) => {
   };
 
   const menuItems = [
-    { label: "Home", to: "home" },
-    { label: "Dice", to: "dice" },
-    { label: "Roulette", to: "roulette" },
+    { label: "Home", to: "https://gamacoin.ai/", external: true },
+    { label: "Dice", to: "https://diceroll.gamacoin.ai/", external: true },
+    { label: "Roulette", to: "roulette", external: false },
   ];
 
   return (
@@ -34,27 +34,46 @@ const HiddenBar = ({ isVisible, toggleSidebar }) => {
         </div>
         <div className="nav-logo-box">
           <div className="logo">
-            <Link to="home" smooth={true} duration={500} onClick={toggleSidebar}>
+            <a
+              href="https://gamacoin.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={toggleSidebar}
+            >
               <img
                 src="https://gamacoin.ai/assets/images/gama-logo.svg"
                 alt="GAMA"
-                onError={(e) => (e.target.src = "https://gamacoin.ai/assets/images/gama-logo.svg")}
+                onError={(e) =>
+                  (e.target.src =
+                    "https://gamacoin.ai/assets/images/gama-logo.svg")
+                }
               />
-            </Link>
+            </a>
           </div>
         </div>
         <div className="side-menu">
           <ul className="navigation custom-links clearfix">
             {menuItems.map((item, index) => (
               <li key={index}>
-                <Link
-                  to={item.to}
-                  smooth={true}
-                  duration={500}
-                  onClick={toggleSidebar}
-                >
-                  {item.label}
-                </Link>
+                {item.external ? (
+                  <a
+                    href={item.to}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={toggleSidebar}
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={item.to}
+                    smooth={true}
+                    duration={500}
+                    onClick={toggleSidebar}
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
             <li>
